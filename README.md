@@ -3,7 +3,6 @@ Repositorio con los ejercicios del curso Introducción a Angular.js para el depa
 
 ## Ejercicio 1.2
 
-Enunciado...
-
+Desarrollar una tabla en AngularJS, utilizando la directiva ng-repeat y obteniendo los datos de un controlador.
 
 BEEVA 2015
