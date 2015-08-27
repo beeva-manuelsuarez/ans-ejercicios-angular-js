@@ -7,8 +7,9 @@
     <title>Angular.js para ANS</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">		
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,18 +21,34 @@
   <body>
 	<div class="container-fluid">
 		<div class="row">
-		
+
 			<div class="col-md-8 col-md-offset-3">
 			<h1 id="title">Titulo</h1>
+      <div ng-app="nanoApp" ng-controller="nanoCtrl">
+        <div class="form">
+          Nombre de Usuario: <input type="text" ng-model="userName">
+        </div>
+
+        <div class="data">
+          Hola {{userName}}
+        </div>
+
+      </div>
+
+
 			</div>
-			
+
 		</div>
 	</div>
-	
-	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script>
+    var app = angular.module('nanoApp', []);
+    app.controller('nanoCtrl', function($scope){
+      $scope.userName= "Nano";
+    });
+
+  </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	
+
   </body>
 </html>
